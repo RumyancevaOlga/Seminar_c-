@@ -17,7 +17,7 @@ if(number < 100 && number > -100)
 }
 else 
 {
-    int devision = number / 100;
+    int devision = Math.Abs(number) / 100;
     int score = 0;
     while(devision > 1)
     {
@@ -40,12 +40,5 @@ else
        {
         thirdNumber = number % 10;
        }
-       if(thirdNumber > 0)
-       {
         Console.WriteLine($"Третей цифрой числа {number} является {thirdNumber}");
-       }
-       else
-       {
-        Console.WriteLine($"Третей цифрой числа {number} является {-thirdNumber}");
-       }
 }
