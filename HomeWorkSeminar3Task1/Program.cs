@@ -33,7 +33,7 @@ while(palindrome > 9)
     palindrome = (palindrome - firstNumber * i) / 10;
 }
 
-if(firstNumber == lastNumber && firstNumber != 0 && lastNumber != 0)
+if(firstNumber == lastNumber && userNumber > 9)
 {
     Console.WriteLine($"Ура! {userNumber} является палиндромом.");
 }
