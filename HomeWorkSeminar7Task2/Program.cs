@@ -29,8 +29,17 @@ Console.WriteLine("Введите номер столбца искомого э�
 int columnNumber = Convert.ToInt32(Console.ReadLine());
 
 //Применяем метод по нахождению элемента
-GetItem(array, rowNumber, columnNumber);
+int result = GetItem(array, rowNumber, columnNumber);
 //Не забываем, что индексы начинаются с нуля
+//Выводим результат
+if(result >= 0)
+    {
+        Console.WriteLine($"Элемент с индексом ({rowNumber},{columnNumber}) равен {array[rowNumber,columnNumber]}");
+    }
+    else
+    {
+        Console.WriteLine($"Элемента с индексом ({rowNumber},{columnNumber}) не существует в указанном выше массиве");
+    }
 
 //Задаем метод для заполнения массива случайными числами 
 int [,] GetArray(int rows, int columns, int min, int max)
@@ -61,14 +70,17 @@ void PrintArray(int [,] array)
 }
 
 //Задаем метод для нахождения элемента по индексу
-void GetItem (int[,] array, int rowNumber, int columnNumber)
+//Немножко изменим, так как в задании сказано про возвращаемый результат
+int GetItem (int[,] array, int rowNumber, int columnNumber)
 {
+    int result = 0;
     if(rowNumber < array.GetLength(0) && columnNumber < array.GetLength(1))
     {
-        Console.WriteLine($"Элемент с индексом ({rowNumber},{columnNumber}) равен {array[rowNumber,columnNumber]}");
+        result = array[rowNumber,columnNumber];
     }
     else
     {
-        Console.WriteLine($"Элемента с индексом ({rowNumber},{columnNumber}) не существует в указанном выше массиве");
+        result = -1;//Будем считать, что если результат отрицательный, то такого элемента не существует
     }
+    return result;
 }
