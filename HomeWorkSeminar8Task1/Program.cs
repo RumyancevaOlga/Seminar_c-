@@ -24,7 +24,7 @@ int[,] GetArray(int rows, int columns, int min, int max)
     return result;
 }
 
-//задаем вывод для вывода двумерного массива на экран
+//задаем метод для вывода двумерного массива на экран
 void PrintArray(int[,] array)
 {
     for(int i = 0; i < array.GetLength(0); i++)
