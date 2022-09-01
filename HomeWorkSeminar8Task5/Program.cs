@@ -6,7 +6,7 @@
 11 16 15 06
 10 09 08 07*/
 
-int[,] array = new int [6,6];
+int[,] array = new int [4,4];
 int sideA = array.GetLength(0);
 int sideB = array.GetLength(1);//обозначаем стороны массива
 int beginI = 0;
