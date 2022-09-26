@@ -29,3 +29,4 @@ int AkkermanFunction(int m, int n)
 }
 
 Console.WriteLine(AkkermanFunction(m, n));//в результате сломала всю голову, так как в примере ошибка. Должно получиться 9, а не 29.
+
